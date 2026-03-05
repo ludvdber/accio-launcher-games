@@ -69,9 +69,25 @@
             "executable": "HP3/system/hppoa.exe",
             "cover_image": "hp3_cover.jpg",
             "tags": ["Aventure", "Action", "Plateforme", "Multi-personnages"],
-            "latest_version": "1.0",
-            "recommended_version": "1.0",
+            "latest_version": "1.1",
+            "recommended_version": "1.1",
             "versions": [
+                {
+                    "version": "1.1",
+                    "date": "2025-03-06",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp3-v1.1/hp3.7z",
+                    "download_parts": null,
+                    "size_mb": 2800,
+                    "changes": [
+                        "DGVoodoo 2.8.1 → 2.86.5",
+                        "Anti-aliasing 4x, filtrage anisotrope 8x",
+                        "Widescreen 16:9 (1920x1080) avec FOV ajusté",
+                        "Cap 60 FPS intégré via DGVoodoo",
+                        "VSync activé, upscaling Lanczos-2",
+                        "Nettoyage des fichiers inutiles (~15 Mo)",
+                        "Vidéos d'intro adaptées au widescreen"
+                    ]
+                },
                 {
                     "version": "1.0",
                     "date": "2025-03-05",
@@ -80,13 +96,23 @@
                     "size_mb": 2800,
                     "changes": [
                         "Version originale du jeu",
-                        "DGVoodoo 2.8 intégré",
+                        "DGVoodoo 2.8.1 intégré",
                         "Configuration par défaut optimisée"
                     ]
                 }
             ],
             "post_install": {
-                "registry": []
+                "registry": [],
+                "config_files": [
+                    {
+                        "source": "config/hppoa.ini",
+                        "destination": "~/Documents/Harry Potter et le prisonnier d'Azkaban/hppoa.ini"
+                    },
+                    {
+                        "source": "config/User.ini",
+                        "destination": "~/Documents/Harry Potter et le prisonnier d'Azkaban/User.ini"
+                    }
+                ]
             }
         },
         {
