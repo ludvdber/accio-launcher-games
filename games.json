@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.4",
+    "catalog_version": "0.5",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -36,7 +36,9 @@
               {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "FirstRun", "key": "Reconfig", "value": "0"},
               {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Engine.Engine", "key": "GameRenderDevice", "value": "D3D11Drv.D3D11RenderDevice"},
               {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "D3D11Drv.D3D11RenderDevice", "key": "Borderless", "value": "True"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "D3D11Drv.D3D11RenderDevice", "key": "FastAltTab", "value": "True"}
+              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "D3D11Drv.D3D11RenderDevice", "key": "FastAltTab", "value": "True"},
+              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Core.System", "key": "SavePath", "value": "%DOCUMENTS%\\Harry Potter\\Save"},
+              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Core.System", "key": "CachePath", "value": "%DOCUMENTS%\\Harry Potter\\Cache"}
             ]
           },
           "post_install": {
