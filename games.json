@@ -11,9 +11,19 @@
           "executable": "HP1/System/HP.exe",
           "cover_image": "hp1_cover.jpg",
           "tags": ["Aventure", "Action", "Plateforme", "Énigmes"],
-          "latest_version": "1.0",
-          "recommended_version": "1.0",
+          "latest_version": "1.1",
+          "recommended_version": "1.1",
           "versions": [
+            {
+              "version": "1.1",
+              "date": "2026-03-08",
+              "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.1/hp1.7z",
+              "download_parts": null,
+              "size_mb": 431,
+              "changes": [
+                "Des images dans le menu des sauvegardes"
+              ]
+            },
             {
               "version": "1.0",
               "date": "2026-03-06",
