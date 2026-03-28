@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.9",
+    "catalog_version": "0.10",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -125,7 +125,7 @@
                     "date": "2026-03-28",
                     "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp2-v1.0/hp2.7z",
                     "download_parts": null,
-                    "size_mb": 2500,
+                    "size_mb": 250,
                     "changes": [
                         "Renderer D3D11 1.6.2 intégré (antialiasing 8x, anisotropie 16x, bump mapping, SSAO, SSR)",
                         "Widescreen 16:9 (1920x1080) avec FOV 106°",
