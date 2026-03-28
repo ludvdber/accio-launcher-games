@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.10",
+    "catalog_version": "0.11",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -192,6 +192,10 @@
                     {
                         "source": "config/Game.ini",
                         "destination": "~/Documents/Harry Potter II/Game.ini"
+                    },
+                    {
+                        "source": "config/User.ini",
+                        "destination": "~/Documents/Harry Potter II/User.ini"
                     }
                 ]
             }
