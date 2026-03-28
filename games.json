@@ -1,72 +1,107 @@
 {
-    "catalog_version": "0.8",
+    "catalog_version": "0.9",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
-          "id": "hp1",
-          "name": "Harry Potter à l'École des Sorciers",
-          "year": 2001,
-          "description": "Incarnez Harry Potter et découvrez l'univers magique de Poudlard pour la toute première fois. Explorez les couloirs du château, apprenez des sortilèges, préparez des potions et découvrez des passages secrets tout en suivant l'intrigue du premier livre. Participez à des matchs de Quidditch effrénés et affrontez des créatures magiques dans cette aventure inoubliable.",
-          "developer": "KnowWonder",
-          "executable": "HP1/System/HP.exe",
-          "cover_image": "hp1_cover.jpg",
-          "tags": ["Aventure", "Action", "Plateforme", "Énigmes"],
-          "latest_version": "1.1",
-          "recommended_version": "1.1",
-          "versions": [
-            {
-              "version": "1.1",
-              "date": "2026-03-08",
-              "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.1/hp1.7z",
-              "download_parts": null,
-              "size_mb": 431,
-              "changes": [
-                "Des images dans le menu des sauvegardes"
-              ]
-            },
-            {
-              "version": "1.0",
-              "date": "2026-03-06",
-              "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.0/hp1.7z",
-              "download_parts": null,
-              "size_mb": 430,
-              "changes": [
-                "Renderer Kentie D3D11 intégré (antialiasing 4x, anisotropie 16x, bump mapping, SSAO, HDR, SSR)",
-                "Widescreen 16:9 (1920x1080) avec FOV 106°",
-                "Mode borderless windowed (alt-tab sans crash)",
-                "Cap 100 FPS (limite UE1 recommandée)",
-                "Interface mise à l'échelle pour les résolutions modernes",
-                "Voix et textes FR + EN inclus",
-                "Nettoyage des fichiers inutiles (DRM, installeurs, manuel PDF)"
-              ]
-            }
-          ],
-          "pre_launch": {
-            "create_files": [
-              "%DOCUMENTS%\\Harry Potter\\Running.ini"
+            "id": "hp1",
+            "name": "Harry Potter à l'École des Sorciers",
+            "year": 2001,
+            "description": "Incarnez Harry Potter et découvrez l'univers magique de Poudlard pour la toute première fois. Explorez les couloirs du château, apprenez des sortilèges, préparez des potions et découvrez des passages secrets tout en suivant l'intrigue du premier livre. Participez à des matchs de Quidditch effrénés et affrontez des créatures magiques dans cette aventure inoubliable.",
+            "developer": "KnowWonder",
+            "executable": "HP1/System/HP.exe",
+            "cover_image": "hp1_cover.jpg",
+            "tags": [
+                "Aventure",
+                "Action",
+                "Plateforme",
+                "Énigmes"
             ],
-            "ini_patches": [
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "FirstRun", "key": "Reconfig", "value": "0"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Engine.Engine", "key": "GameRenderDevice", "value": "D3D11Drv.D3D11RenderDevice"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "D3D11Drv.D3D11RenderDevice", "key": "Borderless", "value": "True"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "D3D11Drv.D3D11RenderDevice", "key": "FastAltTab", "value": "True"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Core.System", "key": "SavePath", "value": "%DOCUMENTS%\\Harry Potter\\Save"},
-              {"file": "%DOCUMENTS%\\Harry Potter\\HP.ini", "section": "Core.System", "key": "CachePath", "value": "%DOCUMENTS%\\Harry Potter\\Cache"}
-            ]
-          },
-          "post_install": {
-            "registry": [],
-            "config_files": [
-              {
-                "source": "config/HP.ini",
-                "destination": "~/Documents/Harry Potter/HP.ini"
-              },
-              {
-                "source": "config/User.ini",
-                "destination": "~/Documents/Harry Potter/User.ini"
-              }
-            ]
-          }
+            "latest_version": "1.1",
+            "recommended_version": "1.1",
+            "versions": [
+                {
+                    "version": "1.1",
+                    "date": "2026-03-08",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.1/hp1.7z",
+                    "download_parts": null,
+                    "size_mb": 431,
+                    "changes": [
+                        "Des images dans le menu des sauvegardes"
+                    ]
+                },
+                {
+                    "version": "1.0",
+                    "date": "2026-03-06",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.0/hp1.7z",
+                    "download_parts": null,
+                    "size_mb": 430,
+                    "changes": [
+                        "Renderer Kentie D3D11 intégré (antialiasing 4x, anisotropie 16x, bump mapping, SSAO, HDR, SSR)",
+                        "Widescreen 16:9 (1920x1080) avec FOV 106°",
+                        "Mode borderless windowed (alt-tab sans crash)",
+                        "Cap 100 FPS (limite UE1 recommandée)",
+                        "Interface mise à l'échelle pour les résolutions modernes",
+                        "Voix et textes FR + EN inclus",
+                        "Nettoyage des fichiers inutiles (DRM, installeurs, manuel PDF)"
+                    ]
+                }
+            ],
+            "pre_launch": {
+                "create_files": [
+                    "%DOCUMENTS%\\Harry Potter\\Running.ini"
+                ],
+                "ini_patches": [
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "FirstRun",
+                        "key": "Reconfig",
+                        "value": "0"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "Engine.Engine",
+                        "key": "GameRenderDevice",
+                        "value": "D3D11Drv.D3D11RenderDevice"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "D3D11Drv.D3D11RenderDevice",
+                        "key": "Borderless",
+                        "value": "True"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "D3D11Drv.D3D11RenderDevice",
+                        "key": "FastAltTab",
+                        "value": "True"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "Core.System",
+                        "key": "SavePath",
+                        "value": "%DOCUMENTS%\\Harry Potter\\Save"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                        "section": "Core.System",
+                        "key": "CachePath",
+                        "value": "%DOCUMENTS%\\Harry Potter\\Cache"
+                    }
+                ]
+            },
+            "post_install": {
+                "registry": [],
+                "config_files": [
+                    {
+                        "source": "config/HP.ini",
+                        "destination": "~/Documents/Harry Potter/HP.ini"
+                    },
+                    {
+                        "source": "config/User.ini",
+                        "destination": "~/Documents/Harry Potter/User.ini"
+                    }
+                ]
+            }
         },
         {
             "id": "hp2",
@@ -74,27 +109,91 @@
             "year": 2002,
             "description": "Replongez dans le monde des sorciers avec un Poudlard plus ouvert et plus riche à explorer que jamais. Apprenez de nouveaux sortilèges comme Expelliarmus et Lumos pour résoudre des énigmes et vaincre vos ennemis. Entre les matchs de Quidditch, les infiltrations sous la Cape d'Invisibilité et l'exploration de la Forêt Interdite, chaque recoin du château regorge de secrets à découvrir.",
             "developer": "KnowWonder",
-            "executable": "HP2/Game.exe",
+            "executable": "HP2/system/Game.exe",
             "cover_image": "hp2_cover.jpg",
-            "tags": ["Aventure", "Action", "Exploration", "Énigmes"],
+            "tags": [
+                "Aventure",
+                "Action",
+                "Exploration",
+                "Énigmes"
+            ],
             "latest_version": "1.0",
             "recommended_version": "1.0",
             "versions": [
                 {
                     "version": "1.0",
-                    "date": "2025-03-05",
+                    "date": "2026-03-28",
                     "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp2-v1.0/hp2.7z",
                     "download_parts": null,
                     "size_mb": 2500,
                     "changes": [
-                        "Version originale du jeu",
-                        "DGVoodoo 2.8 intégré",
-                        "Configuration par défaut optimisée"
+                        "Renderer D3D11 1.6.2 intégré (antialiasing 8x, anisotropie 16x, bump mapping, SSAO, SSR)",
+                        "Widescreen 16:9 (1920x1080) avec FOV 106°",
+                        "Mode borderless windowed (alt-tab sans crash)",
+                        "Cap 100 FPS (stabilité du gameplay)",
+                        "Interface mise à l'échelle pour les résolutions modernes",
+                        "Voix et textes FR inclus",
+                        "Nettoyage des fichiers inutiles (DRM, installeurs)"
                     ]
                 }
             ],
+            "pre_launch": {
+                "create_files": [
+                    "%DOCUMENTS%\\Harry Potter II\\Running.ini"
+                ],
+                "ini_patches": [
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "FirstRun",
+                        "key": "Reconfig",
+                        "value": "0"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "Engine.Engine",
+                        "key": "GameRenderDevice",
+                        "value": "D3D11Drv.D3D11RenderDevice"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "D3D11Drv.D3D11RenderDevice",
+                        "key": "Borderless",
+                        "value": "True"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "D3D11Drv.D3D11RenderDevice",
+                        "key": "FastAltTab",
+                        "value": "True"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "D3D11Drv.D3D11RenderDevice",
+                        "key": "SupportMETextEnabled",
+                        "value": "False"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "Core.System",
+                        "key": "SavePath",
+                        "value": "%DOCUMENTS%\\Harry Potter II\\Save\\Slot1"
+                    },
+                    {
+                        "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                        "section": "UWindow.UWindowRootWindow",
+                        "key": "GUIScale",
+                        "value": "2.25"
+                    }
+                ]
+            },
             "post_install": {
-                "registry": []
+                "registry": [],
+                "config_files": [
+                    {
+                        "source": "config/Game.ini",
+                        "destination": "~/Documents/Harry Potter II/Game.ini"
+                    }
+                ]
             }
         },
         {
@@ -105,7 +204,12 @@
             "developer": "KnowWonder",
             "executable": "HP3/system/hppoa.exe",
             "cover_image": "hp3_cover.jpg",
-            "tags": ["Aventure", "Action", "Plateforme", "Multi-personnages"],
+            "tags": [
+                "Aventure",
+                "Action",
+                "Plateforme",
+                "Multi-personnages"
+            ],
             "latest_version": "1.1",
             "recommended_version": "1.1",
             "versions": [
@@ -160,7 +264,12 @@
             "developer": "EA UK",
             "executable": "HP4/HP4.exe",
             "cover_image": "hp4_cover.jpg",
-            "tags": ["Action", "Coopératif", "Combat", "Aventure"],
+            "tags": [
+                "Action",
+                "Coopératif",
+                "Combat",
+                "Aventure"
+            ],
             "latest_version": "1.0",
             "recommended_version": "1.0",
             "versions": [
@@ -189,7 +298,12 @@
             "developer": "EA UK",
             "executable": "HP5/hp5.exe",
             "cover_image": "hp5_cover.jpg",
-            "tags": ["Monde ouvert", "Aventure", "Duel", "Exploration"],
+            "tags": [
+                "Monde ouvert",
+                "Aventure",
+                "Duel",
+                "Exploration"
+            ],
             "latest_version": "1.0",
             "recommended_version": "1.0",
             "versions": [
@@ -222,7 +336,12 @@
             "developer": "EA UK",
             "executable": "HP6/hp6.exe",
             "cover_image": "hp6_cover.jpg",
-            "tags": ["Monde ouvert", "Duel", "Potions", "Quidditch"],
+            "tags": [
+                "Monde ouvert",
+                "Duel",
+                "Potions",
+                "Quidditch"
+            ],
             "latest_version": "1.0",
             "recommended_version": "1.0",
             "versions": [
