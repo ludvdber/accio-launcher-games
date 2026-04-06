@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.11",
+    "catalog_version": "0.12",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -61,7 +61,8 @@
                         "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
                         "section": "Engine.Engine",
                         "key": "GameRenderDevice",
-                        "value": "D3D11Drv.D3D11RenderDevice"
+                        "value": "D3D11Drv.D3D11RenderDevice",
+                        "fallback": "D3DDrv.D3DRenderDevice"
                     },
                     {
                         "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
@@ -152,7 +153,8 @@
                         "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
                         "section": "Engine.Engine",
                         "key": "GameRenderDevice",
-                        "value": "D3D11Drv.D3D11RenderDevice"
+                        "value": "D3D11Drv.D3D11RenderDevice",
+                        "fallback": "D3DDrv.D3DRenderDevice"
                     },
                     {
                         "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
@@ -363,6 +365,70 @@
                         "Version originale du jeu",
                         "DGVoodoo 2.8 intégré",
                         "Configuration par défaut optimisée"
+                    ]
+                }
+            ],
+            "post_install": {
+                "registry": []
+            }
+        },
+        {
+            "id": "hp7a",
+            "name": "Harry Potter et les Reliques de la Mort — Partie 1",
+            "year": 2010,
+            "description": "Plongez dans l'aventure la plus sombre de la saga. Harry, Ron et Hermione ont quitté Poudlard pour traquer et détruire les Horcruxes de Voldemort. Affrontez des Rafleurs et des Mangemorts dans des combats intenses à la troisième personne, infiltrez le Ministère de la Magie et survivez dans des environnements hostiles. Avec son gameplay orienté action et ses missions furtives, ce jeu vous place au cœur d'une guerre où chaque sortilège compte.",
+            "developer": "EA Bright Light",
+            "executable": "HP7A/hp7a.exe",
+            "cover_image": "hp7a_cover.jpg",
+            "tags": [
+                "Action",
+                "TPS",
+                "Infiltration",
+                "Combat"
+            ],
+            "latest_version": "1.0",
+            "recommended_version": "1.0",
+            "versions": [
+                {
+                    "version": "1.0",
+                    "date": "2026-04-06",
+                    "download_url": null,
+                    "download_parts": null,
+                    "size_mb": 5000,
+                    "changes": [
+                        "Version originale du jeu"
+                    ]
+                }
+            ],
+            "post_install": {
+                "registry": []
+            }
+        },
+        {
+            "id": "hp7b",
+            "name": "Harry Potter et les Reliques de la Mort — Partie 2",
+            "year": 2011,
+            "description": "L'ultime bataille pour Poudlard. Incarnez Harry et ses alliés dans un jeu d'action explosif centré sur la Bataille de Poudlard. Enchaînez les sortilèges offensifs et défensifs dans des affrontements spectaculaires, protégez le château contre les forces de Voldemort et menez le combat final. Avec ses combats à couvert, ses duels de baguettes intenses et ses moments cinématiques, cette conclusion épique met un point final à la saga vidéoludique Harry Potter.",
+            "developer": "EA Bright Light",
+            "executable": "HP7B/hp7b.exe",
+            "cover_image": "hp7b_cover.jpg",
+            "tags": [
+                "Action",
+                "TPS",
+                "Combat",
+                "Bataille"
+            ],
+            "latest_version": "1.0",
+            "recommended_version": "1.0",
+            "versions": [
+                {
+                    "version": "1.0",
+                    "date": "2026-04-06",
+                    "download_url": null,
+                    "download_parts": null,
+                    "size_mb": 5500,
+                    "changes": [
+                        "Version originale du jeu"
                     ]
                 }
             ],
