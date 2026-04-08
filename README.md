@@ -4,7 +4,7 @@
 
 ### Archives et configurations des jeux Harry Potter PC
 
-[![Jeux disponibles](https://img.shields.io/badge/jeux_disponibles-1%2F6-d4a017?style=for-the-badge&labelColor=0d0d1a)]()
+[![Jeux disponibles](https://img.shields.io/badge/jeux_disponibles-4%2F8-d4a017?style=for-the-badge&labelColor=0d0d1a)]()
 [![DGVoodoo](https://img.shields.io/badge/DGVoodoo-2.86.5-blue?style=for-the-badge&labelColor=0d0d1a)]()
 [![Launcher](https://img.shields.io/badge/launcher-AccioLauncher-27ae60?style=for-the-badge&labelColor=0d0d1a)](https://github.com/ludvdber/AccioLauncher)
 
@@ -23,19 +23,6 @@ Ce repo sert de **source de données** pour Accio Launcher :
 - **`configs/`** — Historique des configurations DGVoodoo et fichiers .ini par jeu
 
 Le launcher vérifie automatiquement ce repo au démarrage. Quand une mise à jour est publiée ici, tous les launchers la détectent.
-
----
-
-## 🎮 Jeux disponibles
-
-| Jeu | Version | DGVoodoo | Widescreen | Statut |
-|-----|---------|----------|------------|--------|
-| ⚡ HP et le Prisonnier d'Azkaban (2004) | v1.1 | 2.86.5 | 16:9 (1920x1080) | ✅ En ligne |
-| ⚡ HP à l'École des Sorciers (2001) | — | — | — | 🔜 À venir |
-| ⚡ HP et la Chambre des Secrets (2002) | — | — | — | 🔜 À venir |
-| ⚡ HP et la Coupe de Feu (2005) | — | — | — | 🔜 À venir |
-| ⚡ HP et l'Ordre du Phénix (2007) | — | — | — | 🔜 À venir |
-| ⚡ HP et le Prince de Sang-Mêlé (2009) | — | — | — | 🔜 À venir |
 
 ---
 
