@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.12",
+    "catalog_version": "0.13",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -268,7 +268,7 @@
             "year": 2005,
             "description": "Affrontez les épreuves du Tournoi des Trois Sorciers en incarnant Harry, Ron ou Hermione dans cette aventure d'action coopérative. Lancez des sortilèges puissants, combattez des créatures redoutables et relevez les trois tâches mortelles du tournoi jusqu'à l'ultime confrontation avec Lord Voldemort. Jouez en coopération avec jusqu'à deux amis pour la première fois dans la série.",
             "developer": "EA UK",
-            "executable": "HP4/HP4.exe",
+            "executable": "HP4/gof_f.exe",
             "cover_image": "hp4_cover.jpg",
             "tags": [
                 "Action",
@@ -281,14 +281,16 @@
             "versions": [
                 {
                     "version": "1.0",
-                    "date": "2025-03-05",
+                    "date": "2026-04-08",
                     "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp4-v1.0/hp4.7z",
                     "download_parts": null,
-                    "size_mb": 3500,
+                    "size_mb": 1680,
                     "changes": [
-                        "Version originale du jeu",
-                        "DGVoodoo 2.8 intégré",
-                        "Configuration par défaut optimisée"
+                        "Wrapper D3D9 Chip-Biscuit intégré (widescreen 1920x1080, 100 FPS, 16:9)",
+                        "Mode borderless windowed (alt-tab sans crash)",
+                        "Fix crash sur Forêt Interdite, Lac, Labyrinthe et Voldemort",
+                        "Voix et textes FR inclus",
+                        "Nettoyage des fichiers inutiles (DRM, installeurs, support multilingue)"
                     ]
                 }
             ],
@@ -302,7 +304,7 @@
             "year": 2007,
             "description": "Explorez une reconstitution complète et détaillée de Poudlard en monde ouvert, sans aucun écran de chargement, dans l'aventure la plus immersive de la série. Recrutez des membres pour l'Armée de Dumbledore, affrontez les Serpentard en duels de sorciers et interagissez avec l'ensemble du château grâce à vos sortilèges. Découvrez chaque recoin de l'école tout en accomplissant les missions inspirées du livre et du film.",
             "developer": "EA UK",
-            "executable": "HP5/hp5.exe",
+            "executable": "HP5/hp.exe",
             "cover_image": "hp5_cover.jpg",
             "tags": [
                 "Monde ouvert",
@@ -319,8 +321,7 @@
                     "download_url": null,
                     "download_parts": [
                         "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.001",
-                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.002",
-                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.003"
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.002"
                     ],
                     "size_mb": 4200,
                     "changes": [
