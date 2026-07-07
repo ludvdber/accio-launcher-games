@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.13",
+    "catalog_version": "0.14",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -126,7 +126,7 @@
                     "date": "2026-03-28",
                     "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp2-v1.0/hp2.7z",
                     "download_parts": null,
-                    "size_mb": 250,
+                    "size_mb": 463,
                     "changes": [
                         "Renderer D3D11 1.6.2 intégré (antialiasing 8x, anisotropie 16x, bump mapping, SSAO, SSR)",
                         "Widescreen 16:9 (1920x1080) avec FOV 106°",
@@ -312,9 +312,28 @@
                 "Duel",
                 "Exploration"
             ],
-            "latest_version": "1.0",
-            "recommended_version": "1.0",
+            "latest_version": "1.1",
+            "recommended_version": "1.1",
             "versions": [
+                {
+                    "version": "1.1",
+                    "date": "2026-07-07",
+                    "download_url": null,
+                    "download_parts": [
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.1/hp5.7z.001",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.1/hp5.7z.002"
+                    ],
+                    "size_mb": 4600,
+                    "changes": [
+                        "Wrapper graphique D3D9 refondu (pipeline de post-traitement réglable)",
+                        "MSAA jusqu'à 16× avec repli automatique, FXAA et netteté adaptative",
+                        "SSAA optionnel (2×/3×/4×) et filtrage anisotrope forcé 16×",
+                        "Occlusion ambiante (SSAO), bloom et god rays volumétriques",
+                        "Étalonnage des couleurs : balance des blancs, contraste ciné, split-tone, vignette",
+                        "Capture d'écran intégrée (F12) et prise en charge du DPI Windows (1440p natif)",
+                        "Latence d'entrée réduite, Alt+Tab instantané, correctif du doublon fantôme"
+                    ]
+                },
                 {
                     "version": "1.0",
                     "date": "2025-03-05",
@@ -323,7 +342,7 @@
                         "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.001",
                         "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.002"
                     ],
-                    "size_mb": 4200,
+                    "size_mb": 4600,
                     "changes": [
                         "Version originale du jeu",
                         "DGVoodoo 2.8 intégré",
