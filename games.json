@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.14",
+    "catalog_version": "0.15",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -237,7 +237,7 @@
                 },
                 {
                     "version": "1.0",
-                    "date": "2025-03-05",
+                    "date": "2026-03-05",
                     "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp3-v1.0/hp3.7z",
                     "download_parts": null,
                     "size_mb": 790,
@@ -325,7 +325,6 @@
                     ],
                     "size_mb": 4600,
                     "changes": [
-                        "Wrapper graphique D3D9 refondu (pipeline de post-traitement réglable)",
                         "MSAA jusqu'à 16× avec repli automatique, FXAA et netteté adaptative",
                         "SSAA optionnel (2×/3×/4×) et filtrage anisotrope forcé 16×",
                         "Occlusion ambiante (SSAO), bloom et god rays volumétriques",
@@ -336,7 +335,7 @@
                 },
                 {
                     "version": "1.0",
-                    "date": "2025-03-05",
+                    "date": "2026-04-08",
                     "download_url": null,
                     "download_parts": [
                         "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.0/hp5.7z.001",
@@ -373,17 +372,16 @@
             "versions": [
                 {
                     "version": "1.0",
-                    "date": "2025-03-05",
+                    "date": "2026-08-17",
                     "download_url": null,
                     "download_parts": [
                         "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.0/hp6.7z.001",
-                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.0/hp6.7z.002",
-                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.0/hp6.7z.003"
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.0/hp6.7z.002"
                     ],
-                    "size_mb": 4500,
+                    "size_mb": 4414,
                     "changes": [
+                        "Wrapper graphique D3D9 refondu (pipeline de post-traitement réglable)",
                         "Version originale du jeu",
-                        "DGVoodoo 2.8 intégré",
                         "Configuration par défaut optimisée"
                     ]
                 }
