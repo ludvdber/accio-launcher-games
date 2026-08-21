@@ -4,8 +4,8 @@
 
 ### Archives et configurations des jeux Harry Potter PC
 
-[![Jeux disponibles](https://img.shields.io/badge/jeux_disponibles-6%2F8-d4a017?style=for-the-badge&labelColor=0d0d1a)]()
-[![Catalogue](https://img.shields.io/badge/catalog__version-0.16-27ae60?style=for-the-badge&labelColor=0d0d1a)]()
+[![Jeux disponibles](https://img.shields.io/badge/jeux_disponibles-8%2F8-d6a72c?style=for-the-badge&labelColor=0d0d1a)]()
+[![Catalogue](https://img.shields.io/badge/catalog__version-0.18-27ae60?style=for-the-badge&labelColor=0d0d1a)]()
 [![Langues](https://img.shields.io/badge/langues-FR%20·%20EN%20·%20ES-9b59b6?style=for-the-badge&labelColor=0d0d1a)]()
 [![Launcher](https://img.shields.io/badge/launcher-AccioLauncher-3776ab?style=for-the-badge&labelColor=0d0d1a)](https://github.com/ludvdber/AccioLauncher)
 
@@ -31,21 +31,34 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 
 ## 🎮 État du catalogue
 
-| # | Jeu | ID | Année | Archive | État |
-|:-:|-----|:--:|:-----:|:-------:|:----:|
-| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | 431 Mo | ✅ En ligne |
-| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | 463 Mo | ✅ En ligne |
-| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | 775 Mo | ✅ En ligne |
-| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | 1,7 Go | ✅ En ligne |
-| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | 4,6 Go | ✅ En ligne |
-| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | 4,4 Go | ✅ En ligne |
-| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | ~5 Go | 🔜 Déclaré, pas d'archive |
-| VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | ~5,5 Go | 🔜 Déclaré, pas d'archive |
+| # | Jeu | ID | Année | Release | Téléchargement | Installé | État |
+|:-:|-----|:--:|:-----:|:-------:|:--------------:|:--------:|:----:|
+| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.1` | 243 Mo | 431 Mo | ✅ En ligne |
+| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.0` | 247 Mo | 463 Mo | ✅ En ligne |
+| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.1` | 337 Mo | 775 Mo | ✅ En ligne |
+| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.0` | 847 Mo | 1,7 Go | ✅ En ligne |
+| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.1` | 2,5 Go | 4,6 Go | ✅ En ligne |
+| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.0` | 2,1 Go | 4,4 Go | ✅ En ligne |
+| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.0` | 4,4 Go | 4,4 Go | ✅ En ligne |
+| VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | `hp8-v1.0` | 7,5 Go | 7,5 Go | ✅ En ligne |
 
-Un jeu dont les `versions` ont `download_url` et `download_parts` à `null` s'affiche
-dans le launcher en **« Bientôt disponible »** : il est visible, décrit et traduit,
-mais son bouton de téléchargement est inactif. C'est voulu — le catalogue annonce ce
-qui arrive.
+> **Téléchargement** est le poids réel des pièces jointes, relevé sur l'API GitHub.
+> **Installé** est le `size_mb` déclaré dans le catalogue. Ne confondez jamais les
+> deux : le launcher exige la somme des deux pendant l'installation, l'archive et
+> les fichiers extraits cohabitant jusqu'au nettoyage final.
+
+> ⚠️ **`size_mb` est la taille INSTALLÉE**, pas celle de l'archive. Le poids du
+> téléchargement n'a pas à être saisi : le launcher le lit sur GitHub, dans la
+> même réponse que les compteurs et les empreintes.
+
+**Le catalogue est complet depuis la v0.18** : les huit jeux de la saga sont
+téléchargeables, et les onze versions publiées portent toutes une empreinte
+SHA-256 fournie par GitHub.
+
+Le mécanisme d'annonce reste disponible pour la suite : un jeu dont les `versions`
+ont `download_url` et `download_parts` à `null` s'affiche dans le launcher en
+**« Bientôt disponible »** — visible, décrit et traduit, mais bouton inactif. C'est
+voulu : le catalogue annonce ce qui arrive avant de le livrer.
 
 ---
 
@@ -66,6 +79,12 @@ HP3/
 └── ...
 ```
 
+La racine de l'archive **ne suit pas forcément l'identifiant du jeu** : `hp7a` est
+livré par la release `hp7-v1.0`, dont l'archive `hp7.7z` se déploie dans `HP7/` ;
+`hp7b` vient de `hp8-v1.0` et se déploie dans `HP8/`. C'est le nom historique du
+dossier de jeu qui fait foi, pas l'identifiant du catalogue — d'où l'importance de
+relire `executable` après avoir empaqueté une archive.
+
 Le chemin déclaré dans `executable` est **relatif à la racine de l'archive** et
 validé au parsing par le launcher : pas de `..`, pas de chemin absolu, pas de lettre
 de lecteur. Une entrée qui viole ces règles est rejetée, jeu compris — c'est ce qui
@@ -83,9 +102,12 @@ accio-launcher-games/
 │   ├── hp1/  (HP.ini, User.ini, CHANGELOG.md)
 │   ├── hp2/  (Game.ini, User.ini, CHANGELOG.md)
 │   └── hp3/  (dgVoodoo.conf, dgVoodoo_v1.0_original.conf, CHANGELOG.md)
-└── Releases (onglet GitHub)
-    ├── hp3-v1.0 → hp3.7z
-    └── hp3-v1.1 → hp3.7z
+└── Releases (onglet GitHub)          ← 11 releases, une par version
+    ├── hp1-v1.0, hp1-v1.1 → hp1.7z
+    ├── hp3-v1.0, hp3-v1.1 → hp3.7z
+    ├── hp5-v1.0, hp5-v1.1 → hp5.7z.001 … .002   (multi-volumes)
+    ├── hp7-v1.0           → hp7.7z.001 … .003
+    └── hp8-v1.0           → hp8.7z.001 … .004
 ```
 
 ---
