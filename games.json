@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.17",
+    "catalog_version": "0.18",
     "catalog_url": "https://raw.githubusercontent.com/ludvdber/accio-launcher-games/main/games.json",
     "games": [
         {
@@ -702,7 +702,7 @@
             "year": 2010,
             "description": "Plongez dans l'aventure la plus sombre de la saga. Harry, Ron et Hermione ont quitté Poudlard pour traquer et détruire les Horcruxes de Voldemort. Affrontez des Rafleurs et des Mangemorts dans des combats intenses à la troisième personne, infiltrez le Ministère de la Magie et survivez dans des environnements hostiles. Avec son gameplay orienté action et ses missions furtives, ce jeu vous place au cœur d'une guerre où chaque sortilège compte.",
             "developer": "EA Bright Light",
-            "executable": "HP7A/hp7a.exe",
+            "executable": "HP7/hp7.exe",
             "cover_image": "hp7a_cover.jpg",
             "tags": [
                 "Action",
@@ -715,22 +715,30 @@
             "versions": [
                 {
                     "version": "1.0",
-                    "date": "2026-04-06",
+                    "date": "2026-08-26",
                     "download_url": null,
-                    "download_parts": null,
-                    "size_mb": 5000,
+                    "download_parts": ["https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.0/hp7.7z.001",
+                                       "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.0/hp7.7z.002",
+                                       "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.0/hp7.7z.003"],
+                    "size_mb": 4445,
                     "changes": [
-                        "Version originale du jeu"
+                        "Wrapper graphique D3D9 refondu",
+                        "Version originale du jeu",
+                        "Configuration par défaut optimisée"
                     ],
                     "i18n": {
                         "en": {
                             "changes": [
-                                "Original game release"
+                                "Rebuilt D3D9 graphics wrapper",
+                                "Original game release",
+                                "Optimised default configuration"
                             ]
                         },
                         "es": {
                             "changes": [
-                                "Versión original del juego"
+                                "Wrapper gráfico D3D9 rediseñado",
+                                "Versión original del juego",
+                                "Configuración predeterminada optimizada"
                             ]
                         }
                     }
@@ -771,7 +779,7 @@
             "year": 2011,
             "description": "L'ultime bataille pour Poudlard. Incarnez Harry et ses alliés dans un jeu d'action explosif centré sur la Bataille de Poudlard. Enchaînez les sortilèges offensifs et défensifs dans des affrontements spectaculaires, protégez le château contre les forces de Voldemort et menez le combat final. Avec ses combats à couvert, ses duels de baguettes intenses et ses moments cinématiques, cette conclusion épique met un point final à la saga vidéoludique Harry Potter.",
             "developer": "EA Bright Light",
-            "executable": "HP7B/hp7b.exe",
+            "executable": "HP8/hp8.exe",
             "cover_image": "hp7b_cover.jpg",
             "tags": [
                 "Action",
@@ -784,22 +792,31 @@
             "versions": [
                 {
                     "version": "1.0",
-                    "date": "2026-04-06",
+                    "date": "2026-08-26",
                     "download_url": null,
-                    "download_parts": null,
-                    "size_mb": 5500,
+                    "download_parts": ["https://github.com/ludvdber/accio-launcher-games/releases/download/hp8-v1.0/hp8.7z.001",
+                                       "https://github.com/ludvdber/accio-launcher-games/releases/download/hp8-v1.0/hp8.7z.002",
+                                       "https://github.com/ludvdber/accio-launcher-games/releases/download/hp8-v1.0/hp8.7z.003",
+                                       "https://github.com/ludvdber/accio-launcher-games/releases/download/hp8-v1.0/hp8.7z.004"],
+                    "size_mb": 7520,
                     "changes": [
-                        "Version originale du jeu"
+                        "Wrapper graphique D3D9 refondu",
+                        "Version originale du jeu",
+                        "Configuration par défaut optimisée"
                     ],
                     "i18n": {
                         "en": {
                             "changes": [
-                                "Original game release"
+                                "Rebuilt D3D9 graphics wrapper",
+                                "Original game release",
+                                "Optimised default configuration"
                             ]
                         },
                         "es": {
                             "changes": [
-                                "Versión original del juego"
+                                "Wrapper gráfico D3D9 rediseñado",
+                                "Versión original del juego",
+                                "Configuración predeterminada optimizada"
                             ]
                         }
                     }
