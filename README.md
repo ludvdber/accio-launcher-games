@@ -107,7 +107,8 @@ accio-launcher-games/
     ├── hp3-v1.0, hp3-v1.1 → hp3.7z
     ├── hp5-v1.0, hp5-v1.1 → hp5.7z.001 … .002   (multi-volumes)
     ├── hp7-v1.0           → hp7.7z.001 … .003
-    └── hp8-v1.0           → hp8.7z.001 … .004
+    ├── hp8-v1.0           → hp8.7z.001 … .004
+    └── trailers-v1        → hp1_video.mp4, hp3_video.mp4   (bandes-annonces)
 ```
 
 ---
@@ -143,6 +144,132 @@ Pour la même raison, soyons clairs sur ce que cette vérification protège : el
 détecte une **corruption de transport** (téléchargement tronqué, proxy, disque qui
 ment). Elle ne protège pas d'une archive remplacée à la source, puisque c'est GitHub
 qui atteste ce que GitHub stocke.
+
+---
+
+## 📺 Bandes-annonces
+
+Depuis la **1.0**, les vidéos ne sont **plus embarquées dans l'exécutable**. Deux
+d'entre elles suffisaient à le faire passer de 74 à **160 Mo** ; les huit
+l'auraient mené au-delà de 500 Mo, pour un ornement dont tout le monde ne veut
+pas. Elles sont donc publiées ici, en pièces jointes de release, et le launcher
+les propose au premier lancement (case cochable, poids annoncé) puis dans
+**Paramètres → Affichage**, où l'on peut les ajouter ou les supprimer.
+
+### Nom des fichiers
+
+Une pièce jointe par jeu, nommée d'après l'**identifiant du catalogue** :
+
+| Jeu | Fichier à publier |
+|---|---|
+| HP1 — École des Sorciers | `hp1_video.mp4` |
+| HP2 — Chambre des Secrets | `hp2_video.mp4` |
+| HP3 — Prisonnier d'Azkaban | `hp3_video.mp4` |
+| HP4 — Coupe de Feu | `hp4_video.mp4` |
+| HP5 — Ordre du Phénix | `hp5_video.mp4` |
+| HP6 — Prince de Sang-Mêlé | `hp6_video.mp4` |
+| HP7 — Reliques de la Mort, partie 1 | `hp7a_video.mp4` |
+| HP7 — Reliques de la Mort, partie 2 | `hp7b_video.mp4` |
+
+> ⚠️ C'est l'identifiant du **catalogue**, pas celui de l'archive. `hp7b` est
+> livré par la release `hp8-v1.0`, dans une archive `hp8.7z` — mais sa
+> bande-annonce s'appelle bien `hp7b_video.mp4`.
+
+Format : **MP4 (H.264 + AAC)**, c'est ce que lit Qt Multimedia sans codec
+supplémentaire. La vidéo est peinte en fond de fiche, donc pas de sous-titres
+incrustés ni de logo dans un coin : le titre et les boutons passent par-dessus.
+
+### Créer la release
+
+| Champ | Valeur |
+|---|---|
+| **Tag** | `trailers-v1` |
+| **Cible** | `main` |
+| **Titre** | Bandes-annonces — v1 |
+| **Brouillon** | non — voir ci-dessous |
+
+Le **tag fait partie de l'URL de téléchargement**
+(`…/releases/download/<tag>/<fichier>`) : il doit correspondre exactement à ce
+que `games.json` déclare. Le changer, c'est changer les huit URLs.
+
+> ⚠️ **Une release en brouillon n'existe pas pour le launcher.** Ses pièces
+> jointes ne sont servies qu'à un compte authentifié : le téléchargement répond
+> 404 chez l'utilisateur, et l'API ne publie ni sa taille ni son empreinte.
+> Publier pour de bon, ou ne pas déclarer le bloc.
+
+Description — elle n'a aucun rôle technique, personne ne la lit depuis le
+launcher ; elle sert à ce qu'on sache, dans six mois, ce qu'il y a dedans :
+
+```markdown
+Bandes-annonces des jeux du catalogue, téléchargées à la demande par Accio
+Launcher et jouées en fond de fiche.
+
+Elles ne sont plus embarquées dans l'exécutable depuis la 1.0 : deux d'entre
+elles le faisaient passer de 74 à 160 Mo. Le launcher les propose au premier
+lancement et dans Paramètres → Affichage, où l'on peut les ajouter ou les
+supprimer à tout moment.
+
+Ces fichiers ne sont pas nécessaires pour jouer.
+
+Format : MP4 (H.264 + AAC). Un fichier par jeu, nommé d'après l'identifiant
+du catalogue : hp1_video.mp4 … hp6_video.mp4, hp7a_video.mp4, hp7b_video.mp4.
+```
+
+### Écrire le bloc : `tools/sync_trailers.py`
+
+**Ne remplissez pas le bloc à la main.** Une fois la release publiée, depuis le
+dépôt du launcher :
+
+```bash
+python tools/sync_trailers.py src/data/games.json ../accio-launcher-games/games.json --bump
+```
+
+Il lit la release, y trouve les `<id>_video.mp4`, et écrit URL et `size_mb`
+d'après ce qui y est **réellement publié** — dans les DEUX fichiers, qui doivent
+rester identiques. Il préserve CRLF et indentation, il est rejouable, et il
+signale les vidéos sans jeu correspondant comme les jeux sans vidéo.
+
+`--tag trailers-v2` pour une autre release, `--version 2.0` pour re-versionner
+tout le monde, `--bump` pour incrémenter `catalog_version` au passage.
+
+### Le bloc `trailers` de `games.json`
+
+```jsonc
+"trailers": {
+  "hp1": {
+    "version": "1.0",
+    "url": "https://github.com/ludvdber/accio-launcher-games/releases/download/trailers-v1/hp1_video.mp4",
+    "size_mb": 82
+  }
+}
+```
+
+- **`version`** — c'est elle qui déclenche un re-téléchargement. Le fichier est
+  rangé chez l'utilisateur sous `hp1_video_v1.0.mp4` : tant que la version ne
+  bouge pas, rien n'est retéléchargé ; dès qu'elle change, l'ancienne est
+  supprimée et la nouvelle arrive. **Sans ce numéro, une bande-annonce améliorée
+  ne remplacerait jamais l'ancienne**, puisque le nom de la pièce jointe, lui,
+  ne change pas.
+- **N'y déclarez que ce qui existe.** Huit entrées dont six répondent 404, ce
+  sont six échecs à chaque tentative. Le catalogue se met à jour à distance :
+  ajoutez les autres au fur et à mesure, sans republier le launcher.
+- **`size_mb`** sert au libellé du bouton et au garde-fou de taille. Le poids
+  réel publié par GitHub le remplace dès qu'il est connu.
+- **Pas de `sha256` à la main**, même règle que les archives (voir plus haut).
+- **`url` en https** — une autre valeur est écartée à la lecture.
+
+### Améliorer une bande-annonce
+
+1. Publier le nouveau fichier (même nom) dans une release — `trailers-v2` par
+   exemple, ou en remplaçant la pièce jointe.
+2. Rejouer `tools/sync_trailers.py` avec `--tag`, `--version` et `--bump` : il
+   met à jour l'`url`, la taille, la `version` et `catalog_version` d'un coup.
+
+À la main, ce serait quatre champs à changer sans en oublier un, dans deux
+fichiers qui doivent rester identiques.
+
+L'ancien fichier est supprimé du disque de l'utilisateur avant que le nouveau ne
+soit téléchargé — le dossier ne grossit pas à chaque révision.
 
 ---
 
