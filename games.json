@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.26",
+    "catalog_version": "0.27",
     "contributors": [
         {
             "name": "ASTeam",
@@ -73,7 +73,7 @@
                 "Plateforme",
                 "Énigmes"
             ],
-            "latest_version": "1.1",
+            "latest_version": "1.2",
             "recommended_version": "1.2",
             "versions": [
                 {
@@ -284,7 +284,7 @@
                 "Exploration",
                 "Énigmes"
             ],
-            "latest_version": "1.0",
+            "latest_version": "1.1",
             "recommended_version": "1.1",
             "versions": [
                 {
@@ -479,7 +479,7 @@
                 "Plateforme",
                 "Multi-personnages"
             ],
-            "latest_version": "1.1",
+            "latest_version": "1.2",
             "recommended_version": "1.2",
             "versions": [
                 {
