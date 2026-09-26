@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.31",
+    "catalog_version": "0.32",
     "contributors": [
         {
             "name": "ASTeam",
@@ -265,6 +265,52 @@
                 ],
                 "files": "Save*.usa",
                 "first": 0
+            },
+            "language_files": {
+                "languages": {
+                    "fr": {
+                        "label": "Français",
+                        "requires_file": "HP1/Sounds/AllDialog.fre_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "fre"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\System\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "fre"
+                            }
+                        ]
+                    },
+                    "en": {
+                        "label": "English",
+                        "requires_file": "HP1/Sounds/AllDialog.uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "int"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\System\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "int"
+                            }
+                        ],
+                        "copy": [
+                            {
+                                "from": "HP1/Help/Splash0.bmp",
+                                "to": "HP1/Help/splashint.bmp"
+                            }
+                        ]
+                    }
+                }
             },
             "display_locked": true,
             "warning": "Ne changez pas les options vidéo dans le jeu : l'affichage est déjà réglé au mieux par le lanceur, et le modifier ici peut empêcher le jeu de redémarrer."
@@ -641,6 +687,9 @@
             "description": "Affrontez les épreuves du Tournoi des Trois Sorciers en incarnant Harry, Ron ou Hermione dans cette aventure d'action coopérative. Lancez des sortilèges puissants, combattez des créatures redoutables et relevez les trois tâches mortelles du tournoi jusqu'à l'ultime confrontation avec Lord Voldemort. Jouez en coopération avec jusqu'à deux amis pour la première fois dans la série.",
             "developer": "EA UK",
             "executable": "HP4/gof_f.exe",
+            "requires": [
+                "d3dx9_43"
+            ],
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
@@ -732,9 +781,14 @@
             "description": "Explorez une reconstitution complète et détaillée de Poudlard en monde ouvert, sans aucun écran de chargement, dans l'aventure la plus immersive de la série. Recrutez des membres pour l'Armée de Dumbledore, affrontez les Serpentard en duels de sorciers et interagissez avec l'ensemble du château grâce à vos sortilèges. Découvrez chaque recoin de l'école tout en accomplissant les missions inspirées du livre et du film.",
             "developer": "EA UK",
             "executable": "HP5/hp.exe",
+            "requires": [
+                "xinput1_3",
+                "d3dx9_43"
+            ],
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
+                "surechantillonnage",
                 "compteur_fps",
                 "panneau_perfs"
             ],
@@ -862,11 +916,17 @@
             "description": "Parcourez une fois de plus les couloirs de Poudlard dans cette aventure d'action qui met l'accent sur les duels de sorciers, la préparation de potions et le Quidditch. Affrontez vos adversaires dans des combats magiques intenses, perfectionnez vos talents de potioniste et menez l'équipe de Gryffondor à la victoire. Explorez le château à différents moments de la journée et percez les mystères qui entourent le Prince de Sang-Mêlé.",
             "developer": "EA UK",
             "executable": "HP6/hp6.exe",
+            "requires": [
+                "xinput1_3",
+                "d3dx9_43"
+            ],
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
                 "anticrenelage",
                 "anticrenelage_transparence",
+                "brouillard",
+                "langue_menu",
                 "compteur_fps",
                 "panneau_perfs"
             ],
@@ -1086,13 +1146,19 @@
             },
             "dpi_aware": true,
             "requires": [
-                "vcredist2005_x86"
+                "vcredist2005_x86",
+                "d3dx9_37",
+                "xinput1_3",
+                "d3dx9_43"
             ],
             "saves": {
                 "root": "localappdata",
                 "folders": [
                     "Electronic Arts/Harry Potter*Premi*re Partie",
-                    "Electronic Arts/Harry Potter*Part* 1"
+                    "Electronic Arts/Harry Potter*Part* 1",
+                    "Electronic Arts/Harry Potter*Teil 1",
+                    "Electronic Arts/Harry Potter*cz??? 1",
+                    "Electronic Arts/Гарри Поттер*Часть первая"
                 ],
                 "files": "auto.sav"
             }
@@ -1267,14 +1333,20 @@
             },
             "dpi_aware": true,
             "requires": [
-                "vcredist2008_x86"
+                "vcredist2008_x86",
+                "d3dx9_37",
+                "xinput1_3",
+                "d3dx9_43"
             ],
             "warning": "Votre antivirus peut supprimer Paul.dll pendant l'installation. Si le jeu ne démarre pas, restaurez ce fichier depuis la quarantaine.",
             "saves": {
                 "root": "localappdata",
                 "folders": [
                     "Electronic Arts/Harry Potter*Deuxi*me Partie",
-                    "Electronic Arts/Harry Potter*Part* 2"
+                    "Electronic Arts/Harry Potter*Part* 2",
+                    "Electronic Arts/Harry Potter*Teil 2",
+                    "Electronic Arts/Harry Potter*cz??? 2",
+                    "Electronic Arts/Гарри Поттер*Часть вторая"
                 ],
                 "files": "auto.sav"
             }

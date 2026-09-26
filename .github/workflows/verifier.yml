@@ -1,0 +1,93 @@
+# Vérifie games.json avant qu'il n'atteigne les joueurs, puis chaque semaine.
+#
+# Ce dépôt est servi TEL QUEL à tous les launchers : un envoi sur main est chez
+# tout le monde dans l'heure. Deux travaux :
+#
+# - « catalogue » lit games.json avec le CODE du launcher (dépôt AccioLauncher),
+#   refuse un jeu que le launcher écarterait, une version introuvable, un accent
+#   échappé, et surtout un catalogue MODIFIÉ SANS HAUSSE de catalog_version (le
+#   plus grand gagne : l'envoi n'atteindrait personne). Il compare aussi à la
+#   copie embarquée dans le launcher : même numéro, contenu différent = refus.
+# - « liens » vérifie que chaque adresse répond (archives, parts, bandes-annonces,
+#   liens d'aide) et que les tailles déclarées tiennent sous le plafond du
+#   téléchargeur (×1,5). Un seul octet est demandé par adresse.
+#
+# Pour que « catalogue » BLOQUE un envoi défectueux, il faut une règle du dépôt
+# (Settings → Rules → Rulesets) qui l'exige avant de fusionner dans main ; sans
+# elle, un rouge prévient mais n'empêche rien. « liens » n'est pas à exiger :
+# une panne passagère de GitHub bloquerait une correction urgente.
+#
+# Le passage du lundi prévient d'un lien mort ou d'une copie embarquée qui a
+# divergé sans qu'aucun envoi n'ait eu lieu : GitHub envoie un courriel quand un
+# run planifié échoue.
+name: verifier
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          # L'historique sert à retrouver le games.json d'avant ce changement.
+          fetch-depth: 0
+      # Le parseur du launcher, branche main : c'est lui que les joueurs ont (ou
+      # auront à la prochaine version).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ludvdber/AccioLauncher
+          path: launcher
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: games.json d'avant ce changement
+        env:
+          EVENEMENT: ${{ github.event_name }}
+          BASE: ${{ github.base_ref }}
+          AVANT: ${{ github.event.before }}
+        run: |
+          case "$EVENEMENT" in
+            pull_request) ref="origin/$BASE" ;;
+            push) ref="$AVANT" ;;
+            *) ref="" ;;
+          esac
+          # Un nouvel envoi de branche porte un « avant » fait de zéros.
+          if [[ -n $ref && $ref != 0000000000000000000000000000000000000000 ]] \
+             && git cat-file -e "$ref:games.json" 2>/dev/null; then
+            git show "$ref:games.json" > "$RUNNER_TEMP/precedent.json"
+            echo "Comparé à $ref"
+          else
+            echo "Pas de version précédente à comparer ($EVENEMENT)."
+          fi
+      - name: Vérifier le catalogue
+        run: python tools/verifier_catalogue.py games.json --launcher launcher --precedent "$RUNNER_TEMP/precedent.json"
+
+  liens:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+      - name: Vérifier les adresses et les tailles
+        run: python tools/verifier_catalogue.py games.json --liens
