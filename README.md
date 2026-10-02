@@ -333,6 +333,16 @@ reçu le catalogue distant.
 
 ---
 
+## ✉️ Demande de retrait / Takedown requests
+
+Vous êtes titulaire de droits sur un fichier de ce dépôt ? Ouvrez une
+[issue](https://github.com/ludvdber/accio-launcher-games/issues) en indiquant le fichier concerné : il est
+retiré sous 48 heures, sans discussion. Aucun don ni aucune contrepartie n'est lié à ces
+archives.
+
+*If you hold rights to a file in this repository, open an [issue](https://github.com/ludvdber/accio-launcher-games/issues)
+naming it: it is removed within 48 hours. No donation or payment is tied to these archives.*
+
 ## ⚖️ Avertissement légal
 
 Les archives hébergées dans ce dépôt sont destinées aux personnes possédant une copie légale originale des jeux concernés. Ces archives servent de remplacement pratique aux supports physiques (CD-ROM) qui peuvent être endommagés, perdus ou incompatibles avec les systèmes modernes.
