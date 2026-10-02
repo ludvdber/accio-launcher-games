@@ -11,6 +11,11 @@
 
 *Ce repo contient le catalogue et les archives des jeux utilisés par [Accio Launcher](https://github.com/ludvdber/AccioLauncher).*
 
+**Il faut posséder les jeux.** Ces archives remplacent des supports d'origine abîmés, perdus
+ou illisibles sur un PC récent : elles sont destinées aux personnes qui possèdent une copie
+originale de chaque jeu (CD, DVD ou achat numérique).
+*You must own the games: these archives are meant for owners of an original copy.*
+
 </div>
 
 ---
