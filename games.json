@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.38",
+    "catalog_version": "0.40",
     "contributors": [
         {
             "name": "ASTeam",
@@ -420,7 +420,8 @@
                 "section": "WinDrv.WindowsClient",
                 "width": "WindowedViewportX",
                 "height": "WindowedViewportY"
-            }
+            },
+            "controller": "yes"
         },
         {
             "id": "hp2",
@@ -733,7 +734,8 @@
                         "Action",
                         "Exploration",
                         "Puzzles"
-                    ]
+                    ],
+                    "controller_note": "The game is playable with a controller, but its start window (before the game) needs the mouse."
                 },
                 "es": {
                     "name": "Harry Potter y la cámara secreta",
@@ -743,7 +745,8 @@
                         "Acción",
                         "Exploración",
                         "Puzles"
-                    ]
+                    ],
+                    "controller_note": "El juego se juega con mando, pero su ventana de inicio (antes de la partida) requiere el ratón."
                 }
             },
             "saves": {
@@ -760,7 +763,9 @@
                 "section": "WinDrv.WindowsClient",
                 "width": "WindowedViewportX",
                 "height": "WindowedViewportY"
-            }
+            },
+            "controller": "partial",
+            "controller_note": "Le jeu se joue à la manette, mais sa fenêtre de démarrage (avant la partie) se passe à la souris."
         },
         {
             "id": "hp3",
@@ -1067,7 +1072,8 @@
                 ],
                 "first": 0
             },
-            "display_locked": true
+            "display_locked": true,
+            "controller": "yes"
         },
         {
             "id": "hp4",
@@ -1204,7 +1210,7 @@
                     "download_parts": null,
                     "size_mb": 1680,
                     "changes": [
-                        "Wrapper D3D9 Chip-Biscuit intégré (widescreen 1920x1080, 100 FPS, 16:9)",
+                        "Traducteur graphique D3D9 intégré (widescreen 1920x1080, 100 FPS, 16:9)",
                         "Mode borderless windowed (alt-tab sans crash)",
                         "Fix crash sur Forêt Interdite, Lac, Labyrinthe et Voldemort",
                         "Voix et textes FR inclus",
@@ -1213,7 +1219,7 @@
                     "i18n": {
                         "en": {
                             "changes": [
-                                "Chip-Biscuit D3D9 wrapper bundled (1920x1080 widescreen, 100 FPS, 16:9)",
+                                "D3D9 graphics translator bundled (1920x1080 widescreen, 100 FPS, 16:9)",
                                 "Borderless windowed mode (crash-free alt-tab)",
                                 "Fixed crashes in the Forbidden Forest, the Lake, the Maze and the Voldemort fight",
                                 "French voices and text included",
@@ -1222,7 +1228,7 @@
                         },
                         "es": {
                             "changes": [
-                                "Wrapper D3D9 Chip-Biscuit integrado (panorámico 1920x1080, 100 FPS, 16:9)",
+                                "Traductor gráfico D3D9 integrado (panorámico 1920x1080, 100 FPS, 16:9)",
                                 "Modo ventana sin bordes (alt-tab sin cierres)",
                                 "Corregidos los cierres en el Bosque Prohibido, el Lago, el Laberinto y el combate contra Voldemort",
                                 "Voces y textos en francés incluidos",
@@ -1254,7 +1260,8 @@
                         "Aventura"
                     ]
                 }
-            }
+            },
+            "controller": "yes"
         },
         {
             "id": "hp5",
@@ -1491,7 +1498,8 @@
                     "Electronic Arts/Harry Potter*Ph*nix/HPOOTP"
                 ],
                 "files": "HPOOTP"
-            }
+            },
+            "controller": "yes"
         },
         {
             "id": "hp6",
@@ -1697,7 +1705,8 @@
                     "Electronic Arts/Harry Potter*Prince*/HPHBP0"
                 ],
                 "files": "HPHBP0"
-            }
+            },
+            "controller": "yes"
         },
         {
             "id": "hp7a",
@@ -1900,9 +1909,7 @@
             "dpi_aware": true,
             "requires": [
                 "vcredist2005_x86",
-                "d3dx9_37",
-                "xinput1_3",
-                "d3dx9_43"
+                "d3dx9_37"
             ],
             "saves": {
                 "root": "localappdata",
@@ -2143,9 +2150,7 @@
             "dpi_aware": true,
             "requires": [
                 "vcredist2008_x86",
-                "d3dx9_37",
-                "xinput1_3",
-                "d3dx9_43"
+                "d3dx9_37"
             ],
             "warning": "Votre antivirus peut supprimer Paul.dll pendant l'installation. Si le jeu ne démarre pas, restaurez ce fichier depuis la quarantaine.",
             "saves": {
