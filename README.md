@@ -5,7 +5,7 @@
 ### Archives et configurations des jeux Harry Potter PC
 
 [![Jeux disponibles](https://img.shields.io/badge/jeux_disponibles-8%2F8-d6a72c?style=for-the-badge&labelColor=0d0d1a)]()
-[![Catalogue](https://img.shields.io/badge/catalog__version-0.18-27ae60?style=for-the-badge&labelColor=0d0d1a)]()
+[![Catalogue](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fludvdber%2Faccio-launcher-games%2Fmain%2Fgames.json&query=%24.catalog_version&label=catalog_version&color=27ae60&style=for-the-badge&labelColor=0d0d1a)](games.json)
 [![Langues](https://img.shields.io/badge/langues-FR%20·%20EN%20·%20ES-9b59b6?style=for-the-badge&labelColor=0d0d1a)]()
 [![Launcher](https://img.shields.io/badge/launcher-AccioLauncher-3776ab?style=for-the-badge&labelColor=0d0d1a)](https://github.com/ludvdber/AccioLauncher)
 
@@ -26,7 +26,7 @@ Ce repo sert de **source de données** pour Accio Launcher :
 
 - **`games.json`** — Le catalogue maître que le launcher télécharge au démarrage pour connaître les jeux disponibles, leurs versions et les URLs de téléchargement
 - **Releases** — Les archives `.7z` des jeux sont hébergées en pièces jointes des releases GitHub
-- **`configs/`** — Historique des configurations DGVoodoo et fichiers .ini par jeu
+- **`configs/`** — Historique des fichiers .ini et des réglages graphiques par jeu
 
 Le launcher vérifie automatiquement ce repo au démarrage. Quand une mise à jour est
 publiée ici, tous les launchers la détectent — **sans qu'une nouvelle version du
@@ -38,15 +38,16 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 
 | # | Jeu | ID | Année | Release | Téléchargement | Installé | État |
 |:-:|-----|:--:|:-----:|:-------:|:--------------:|:--------:|:----:|
-| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.1` | 243 Mo | 431 Mo | ✅ En ligne |
-| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.0` | 247 Mo | 463 Mo | ✅ En ligne |
-| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.1` | 337 Mo | 775 Mo | ✅ En ligne |
-| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.0` | 847 Mo | 1,7 Go | ✅ En ligne |
-| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.1` | 2,5 Go | 4,6 Go | ✅ En ligne |
-| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.0` | 2,1 Go | 4,4 Go | ✅ En ligne |
-| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.0` | 4,4 Go | 4,4 Go | ✅ En ligne |
-| VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | `hp8-v1.0` | 7,5 Go | 7,5 Go | ✅ En ligne |
+| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.3` | 242 Mo | 431 Mo | ✅ En ligne |
+| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.2` | 248 Mo | 463 Mo | ✅ En ligne |
+| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.3` | 336 Mo | 775 Mo | ✅ En ligne |
+| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.2` | 847 Mo | 1,7 Go | ✅ En ligne |
+| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.3` | 2,4 Go | 4,5 Go | ✅ En ligne |
+| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.2` | 2,0 Go | 4,3 Go | ✅ En ligne |
+| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.1` | 4,3 Go | 4,3 Go | ✅ En ligne |
+| VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | `hp8-v1.2` | 7,3 Go | 7,5 Go | ✅ En ligne |
 
+> **Release** est la version recommandée (catalogue 0.40, relevé le 2026-10-08).
 > **Téléchargement** est le poids réel des pièces jointes, relevé sur l'API GitHub.
 > **Installé** est le `size_mb` déclaré dans le catalogue. Ne confondez jamais les
 > deux : le launcher exige la somme des deux pendant l'installation, l'archive et
@@ -57,8 +58,8 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 > même réponse que les compteurs et les empreintes.
 
 **Le catalogue est complet depuis la v0.18** : les huit jeux de la saga sont
-téléchargeables, et les onze versions publiées portent toutes une empreinte
-SHA-256 fournie par GitHub.
+téléchargeables, et les 26 versions publiées portent toutes une empreinte
+SHA-256 fournie par GitHub (54 fichiers, relevé le 2026-10-08).
 
 Le mécanisme d'annonce reste disponible pour la suite : un jeu dont les `versions`
 ont `download_url` et `download_parts` à `null` s'affiche dans le launcher en
@@ -76,17 +77,17 @@ HP3/
 ├── config/          ← Fichiers .ini copiés vers Mes Documents par le launcher
 │   ├── hppoa.ini   (résolution 1920x1080)
 │   └── User.ini    (FOV 106.26 pour 16:9)
-├── system/          ← Moteur du jeu + DGVoodoo
+├── system/          ← Moteur du jeu + correctif d'Accio Launcher
 │   ├── hppoa.exe   (exécutable)
-│   ├── dgVoodoo.conf, DDraw.dll, D3D8.dll...
+│   ├── dinput8.dll, dinput8.ini   (la manette)
 │   └── ...
 ├── Animations/, maps/, Movies/, music/, sounds/, textures/
 └── ...
 ```
 
 La racine de l'archive **ne suit pas forcément l'identifiant du jeu** : `hp7a` est
-livré par la release `hp7-v1.0`, dont l'archive `hp7.7z` se déploie dans `HP7/` ;
-`hp7b` vient de `hp8-v1.0` et se déploie dans `HP8/`. C'est le nom historique du
+livré par les releases `hp7-v…`, dont l'archive `hp7.7z` se déploie dans `HP7/` ;
+`hp7b` vient des releases `hp8-v…` et se déploie dans `HP8/`. C'est le nom historique du
 dossier de jeu qui fait foi, pas l'identifiant du catalogue — d'où l'importance de
 relire `executable` après avoir empaqueté une archive.
 
@@ -106,21 +107,24 @@ accio-launcher-games/
 ├── configs/                ← Historique des configs par jeu
 │   ├── hp1/  (HP.ini, User.ini, CHANGELOG.md)
 │   ├── hp2/  (Game.ini, User.ini, CHANGELOG.md)
-│   └── hp3/  (dgVoodoo.conf, dgVoodoo_v1.0_original.conf, CHANGELOG.md)
-└── Releases (onglet GitHub)          ← 11 releases, une par version
-    ├── hp1-v1.0, hp1-v1.1 → hp1.7z
-    ├── hp3-v1.0, hp3-v1.1 → hp3.7z
-    ├── hp5-v1.0, hp5-v1.1 → hp5.7z.001 … .002   (multi-volumes)
-    ├── hp7-v1.0           → hp7.7z.001 … .003
-    ├── hp8-v1.0           → hp8.7z.001 … .004
-    └── trailers-v1        → hp1_video.mp4, hp3_video.mp4   (bandes-annonces)
+│   └── hp3/  (réglages graphiques d'origine et de la v1.0, CHANGELOG.md)
+└── Releases (onglet GitHub)          ← 27 releases : une par version, plus les bandes-annonces
+    ├── hp1-v1.0 … v1.3    → hp1.7z
+    ├── hp2-v1.0 … v1.2    → hp2.7z
+    ├── hp3-v1.0 … v1.3    → hp3.7z
+    ├── hp4-v1.0 … v1.2    → hp4.7z
+    ├── hp5-v1.0 … v1.3    → hp5.7z.001 … .002   (multi-volumes)
+    ├── hp6-v1.0 … v1.2    → hp6.7z.001 … .002
+    ├── hp7-v1.0 … v1.1    → hp7.7z.001 … .003   (hp7a)
+    ├── hp8-v1.0 … v1.2    → hp8.7z.001 … .004   (hp7b)
+    └── trailers-v1        → hp1_video.mp4 … hp7b_video.mp4   (bandes-annonces)
 ```
 
 ---
 
 ## 🆕 Comment une mise à jour fonctionne
 
-1. Une nouvelle archive est préparée (ex: DGVoodoo mis à jour)
+1. Une nouvelle archive est préparée (ex : correctif ou réglages graphiques mis à jour)
 2. Une release est créée ici avec la nouvelle archive
 3. `games.json` est mis à jour avec la nouvelle version
 4. **Les traductions sont régénérées** (voir ci-dessous)
