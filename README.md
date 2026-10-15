@@ -285,19 +285,16 @@ soit téléchargé — le dossier ne grossit pas à chaque révision.
 ## 🌍 Traductions du catalogue
 
 Depuis la **v0.16**, chaque jeu et chaque version portent un bloc `i18n` qui
-traduit les champs visibles par l'utilisateur — `name`, `description`, `tags` et
-`changes`. Les champs techniques (URLs, tailles, `executable`, `ini_patches`…)
+traduit les champs visibles par l'utilisateur — `name`, `description`,
+`warning`, `controller_note` et `changes`. Les champs techniques (URLs, tailles, `executable`, `ini_patches`…)
 n'y figurent jamais.
 
 ```json
 {
   "name": "Harry Potter à l'École des Sorciers",
-  "tags": ["Aventure", "Action"],
   "i18n": {
-    "en": { "name": "Harry Potter and the Philosopher's Stone",
-            "tags": ["Adventure", "Action"] },
-    "es": { "name": "Harry Potter y la piedra filosofal",
-            "tags": ["Aventura", "Acción"] }
+    "en": { "name": "Harry Potter and the Philosopher's Stone" },
+    "es": { "name": "Harry Potter y la piedra filosofal" }
   }
 }
 ```
