@@ -1,0 +1,12 @@
+# Cache Python de tools/ (régénéré à chaque lancement)
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Archives de jeu déposées ici pour un essai : elles se publient en release
+*.7z
+*.7z.[0-9][0-9][0-9]
