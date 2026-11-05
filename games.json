@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.52",
+    "catalog_version": "0.53",
     "contributors": [
         {
             "name": "ASTeam",
@@ -117,9 +117,30 @@
                 "winmm"
             ],
             "cover_image": "hp1_cover.jpg",
-            "latest_version": "1.6",
-            "recommended_version": "1.6",
+            "latest_version": "1.7",
+            "recommended_version": "1.7",
             "versions": [
+                {
+                    "version": "1.7",
+                    "date": "2026-11-05",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp1-v1.7/hp1.7z",
+                    "size_mb": 466,
+                    "changes": [
+                        "Le jeu en espagnol, voix comprises"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "The game in Spanish, voices included"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "El juego en español, con las voces"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.6",
                     "date": "2026-11-02",
@@ -510,6 +531,24 @@
                                 "to": "HP1/Help/splashint.bmp"
                             }
                         ]
+                    },
+                    "es": {
+                        "label": "Español",
+                        "requires_file": "HP1/Sounds/AllDialog.spa_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter\\HP.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "spa"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\System\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "spa"
+                            }
+                        ]
                     }
                 }
             },
@@ -562,9 +601,33 @@
                 "winmm"
             ],
             "cover_image": "hp2_cover.jpg",
-            "latest_version": "1.5",
-            "recommended_version": "1.5",
+            "latest_version": "1.6",
+            "recommended_version": "1.6",
             "versions": [
+                {
+                    "version": "1.6",
+                    "date": "2026-11-05",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp2-v1.6/hp2.7z",
+                    "size_mb": 664,
+                    "changes": [
+                        "Le jeu en anglais et en espagnol, voix comprises",
+                        "Menu pause centré et prolongé jusqu'aux bords sur écran large"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "The game in English and Spanish, voices included",
+                                "Pause menu centred and carried to the edges on wide screens"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "El juego en inglés y en español, con las voces",
+                                "Menú de pausa centrado y prolongado hasta los bordes en pantallas anchas"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.5",
                     "date": "2026-11-02",
@@ -750,6 +813,64 @@
                     }
                 }
             ],
+            "language_files": {
+                "languages": {
+                    "fr": {
+                        "label": "Français",
+                        "requires_file": "HP2/Sounds/AllDialog.FRE_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "fre"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "fre"
+                            }
+                        ]
+                    },
+                    "en": {
+                        "label": "English",
+                        "requires_file": "HP2/Sounds/AllDialog.USA_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "usa"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "usa"
+                            }
+                        ]
+                    },
+                    "es": {
+                        "label": "Español",
+                        "requires_file": "HP2/Sounds/AllDialog.SPA_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter II\\Game.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "spa"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "spa"
+                            }
+                        ]
+                    }
+                }
+            },
             "pre_launch": {
                 "create_files": [
                     "%DOCUMENTS%\\Harry Potter II\\Running.ini"
@@ -1010,6 +1131,12 @@
             "cover_image": "hp3_cover.jpg",
             "latest_version": "1.6",
             "recommended_version": "1.6",
+            "fullscreen_size": {
+              "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+              "section": "WinDrv.WindowsClient",
+              "width": "FullscreenViewportX",
+              "height": "FullscreenViewportY"
+            },
             "versions": [
                 {
                     "version": "1.6",
@@ -1369,6 +1496,274 @@
                 ],
                 "first": 0
             },
+            "language_files": {
+                "languages": {
+                    "fr": {
+                        "label": "Français",
+                        "requires_file": "HP3/sounds/alldialog.fre_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Fre"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Fre"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "en": {
+                        "label": "English",
+                        "requires_file": "HP3/sounds/alldialog.uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "int"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "int"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "es": {
+                        "label": "Español",
+                        "requires_file": "HP3/sounds/alldialog.spa_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Spa"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Spa"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "de": {
+                        "label": "Deutsch",
+                        "requires_file": "HP3/sounds/alldialog.ger_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Ger"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Ger"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "it": {
+                        "label": "Italiano",
+                        "requires_file": "HP3/sounds/alldialog.ita_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Ita"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Ita"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "pt": {
+                        "label": "Português",
+                        "requires_file": "HP3/sounds/alldialog.por_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Por"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Por"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "pt-BR": {
+                        "label": "Português (Brasil)",
+                        "requires_file": "HP3/sounds/alldialog.bra_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Bra"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Bra"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "nl": {
+                        "label": "Nederlands",
+                        "requires_file": "HP3/sounds/alldialog.dut_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Dut"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Dut"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "sv": {
+                        "label": "Svenska",
+                        "requires_file": "HP3/sounds/alldialog.swe_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Swe"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Swe"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "da": {
+                        "label": "Dansk",
+                        "requires_file": "HP3/sounds/alldialog.dan_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Dan"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Dan"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    },
+                    "no": {
+                        "label": "Norsk",
+                        "requires_file": "HP3/sounds/alldialog.nor_uax",
+                        "ini": [
+                            {
+                                "file": "%DOCUMENTS%\\Harry Potter et le prisonnier d'Azkaban\\hppoa.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Nor"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Engine.Engine",
+                                "key": "Language",
+                                "value": "Nor"
+                            },
+                            {
+                                "file": "%INSTALL_DIR%\\system\\Default.ini",
+                                "section": "Core.System",
+                                "key": "AppUserDir",
+                                "value": "Harry Potter et le prisonnier d'Azkaban"
+                            }
+                        ]
+                    }
+                }
+            },
             "display_locked": true,
             "controller": "yes",
             "fix_settings": [
@@ -1436,9 +1831,30 @@
                 "slots": "hp4"
             },
             "cover_image": "hp4_cover.jpg",
-            "latest_version": "1.4",
-            "recommended_version": "1.4",
+            "latest_version": "1.5",
+            "recommended_version": "1.5",
             "versions": [
+                {
+                    "version": "1.5",
+                    "date": "2026-11-05",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp4-v1.5/hp4.7z",
+                    "size_mb": 2598,
+                    "changes": [
+                        "Le jeu en douze langues, dont l'anglais, voix comprises"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "The game in twelve languages, English included, voices too"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "El juego en doce idiomas, inglés incluido, con las voces"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.4",
                     "date": "2026-11-02",
@@ -1656,16 +2072,45 @@
                 "degats_recus",
                 "degats_infliges",
                 "ombres_douces",
-                "son_arriere_plan"
+                "son_arriere_plan",
+                "camera_fluide"
             ],
             "dll_overrides": [
                 "d3d9",
                 "xinput1_3"
             ],
             "cover_image": "hp5_cover.jpg",
-            "latest_version": "1.5",
-            "recommended_version": "1.5",
+            "latest_version": "1.6",
+            "recommended_version": "1.6",
             "versions": [
+                {
+                    "version": "1.6",
+                    "date": "2026-11-05",
+                    "download_url": null,
+                    "download_parts": [
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.6/hp5.7z.001",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.6/hp5.7z.002"
+                    ],
+                    "size_mb": 5908,
+                    "changes": [
+                        "Le jeu en neuf langues, voix comprises",
+                        "Caméra fluide (réglage bêta)"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "The game in nine languages, voices included",
+                                "Smooth camera (beta setting)"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "El juego en nueve idiomas, con las voces",
+                                "Cámara fluida (ajuste beta)"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.5",
                     "date": "2026-10-27",
@@ -2163,9 +2608,36 @@
                 "son_arriere_plan"
             ],
             "cover_image": "hp7a_cover.jpg",
-            "latest_version": "1.2",
-            "recommended_version": "1.2",
+            "latest_version": "1.3",
+            "recommended_version": "1.3",
             "versions": [
+                {
+                    "version": "1.3",
+                    "date": "2026-11-05",
+                    "download_url": null,
+                    "download_parts": [
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.3/hp7.7z.001",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.3/hp7.7z.002",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.3/hp7.7z.003",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp7-v1.3/hp7.7z.004"
+                    ],
+                    "size_mb": 7026,
+                    "changes": [
+                        "Le jeu en sept langues, voix comprises"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "The game in seven languages, voices included"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "El juego en siete idiomas, con las voces"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.2",
                     "date": "2026-10-27",
