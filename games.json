@@ -1,5 +1,5 @@
 {
-    "catalog_version": "0.56",
+    "catalog_version": "0.58",
     "contributors": [
         {
             "name": "ASTeam",
@@ -1827,6 +1827,12 @@
                     "HP4/screenshots/*.png"
                 ]
             },
+            "resolution": {
+                "file": "%INSTALL_DIR%\\d3d9.ini",
+                "section": "Accio.Game",
+                "width": "Width",
+                "height": "Height"
+            },
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
@@ -1843,6 +1849,7 @@
                 "rayons",
                 "couleurs",
                 "vivacite",
+                "vignette",
                 "contraste",
                 "mode_fenetre",
                 "format_image",
@@ -1850,6 +1857,7 @@
                 "ecran_principal",
                 "premier_plan",
                 "synchro_verticale",
+                "images_a_l_heure",
                 "manette_playstation_hp4",
                 "nettete",
                 "feuillage_lointain",
@@ -1870,9 +1878,33 @@
                 "slots": "hp4"
             },
             "cover_image": "hp4_cover.jpg",
-            "latest_version": "1.5",
-            "recommended_version": "1.5",
+            "latest_version": "1.6",
+            "recommended_version": "1.6",
             "versions": [
+                {
+                    "version": "1.6",
+                    "date": "2026-11-15",
+                    "download_url": "https://github.com/ludvdber/accio-launcher-games/releases/download/hp4-v1.6/hp4.7z",
+                    "size_mb": 2598,
+                    "changes": [
+                        "Plus de saccades sous la limite d'images ou avec la synchronisation verticale",
+                        "Démarre sur le préréglage d'image « Équilibrée »"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "No more stutter below the frame limit or with vertical sync",
+                                "Starts on the “Balanced” image preset"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "Adiós a los tirones bajo el límite de imágenes o con la sincronización vertical",
+                                "Arranca con el preajuste de imagen «Equilibrada»"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.5",
                     "date": "2026-11-05",
@@ -2083,6 +2115,18 @@
                 "on": 4,
                 "off": 0
             },
+            "resolution": {
+                "file": "%INSTALL_DIR%\\d3d9.ini",
+                "section": "Accio.Game",
+                "width": "Width",
+                "height": "Height",
+                "option_registry": {
+                    "root": "HKCU",
+                    "key": "Software\\Electronic Arts\\Harry Potter and the Order of the Phoenix\\GameSettings",
+                    "value": "OptionResolution",
+                    "set": 0
+                }
+            },
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
@@ -2093,9 +2137,11 @@
                 "filtrage",
                 "occlusion",
                 "halo",
+                "force_halo",
                 "rayons",
                 "couleurs",
                 "vivacite",
+                "vignette",
                 "contraste",
                 "mode_fenetre",
                 "format_image",
@@ -2103,6 +2149,7 @@
                 "ecran_principal",
                 "premier_plan",
                 "synchro_verticale",
+                "images_a_l_heure",
                 "manette_playstation",
                 "vibrations",
                 "nettete",
@@ -2119,9 +2166,43 @@
                 "xinput1_3"
             ],
             "cover_image": "hp5_cover.jpg",
-            "latest_version": "1.6",
-            "recommended_version": "1.6",
+            "latest_version": "1.7",
+            "recommended_version": "1.7",
             "versions": [
+                {
+                    "version": "1.7",
+                    "date": "2026-11-15",
+                    "download_url": null,
+                    "download_parts": [
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.7/hp5.7z.001",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp5-v1.7/hp5.7z.002"
+                    ],
+                    "size_mb": 5909,
+                    "changes": [
+                        "Plus de saccades sous la limite d'images ou avec la synchronisation verticale",
+                        "Halo autour des cheveux et des visages adouci",
+                        "Caméra fluide : lèvres et étoiles d'XP à la bonne vitesse, souris plus douce",
+                        "Démarre sur le préréglage d'image « Équilibrée »"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "No more stutter below the frame limit or with vertical sync",
+                                "Softer glow around hair and faces",
+                                "Smooth camera: lips and XP stars at the right speed, gentler mouse",
+                                "Starts on the “Balanced” image preset"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "Adiós a los tirones bajo el límite de imágenes o con la sincronización vertical",
+                                "Halo más suave alrededor del pelo y las caras",
+                                "Cámara fluida: labios y estrellas de XP a su velocidad, ratón más suave",
+                                "Arranca con el preajuste de imagen «Equilibrada»"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.6",
                     "date": "2026-11-05",
@@ -2401,6 +2482,18 @@
                 "on": 4,
                 "off": 0
             },
+            "resolution": {
+                "file": "%INSTALL_DIR%\\d3d9.ini",
+                "section": "Accio.Game",
+                "width": "Width",
+                "height": "Height",
+                "option_registry": {
+                    "root": "HKCU",
+                    "key": "Software\\Electronic Arts\\Harry Potter and the Half Blood Prince\\GameSettings",
+                    "value": "OptionResolution",
+                    "set": 0
+                }
+            },
             "fix_settings": [
                 "arriere_plan",
                 "limite_fps",
@@ -2415,9 +2508,11 @@
                 "filtrage",
                 "occlusion",
                 "halo",
+                "force_halo",
                 "rayons",
                 "couleurs",
                 "vivacite",
+                "vignette",
                 "contraste",
                 "mode_fenetre",
                 "format_image",
@@ -2425,6 +2520,8 @@
                 "ecran_principal",
                 "premier_plan",
                 "synchro_verticale",
+                "fermeture_sans_plantage",
+                "images_a_l_heure",
                 "manette_playstation",
                 "vibrations",
                 "nettete",
@@ -2434,7 +2531,9 @@
                 "reaction_ennemis",
                 "sorts_retires",
                 "feuillage_lointain",
+                "decor_entier",
                 "mipmaps_fins",
+                "textures_hd",
                 "vert_relief",
                 "son_arriere_plan",
                 "ciel",
@@ -2446,9 +2545,43 @@
                 "xinput1_3"
             ],
             "cover_image": "hp6_cover.jpg",
-            "latest_version": "1.3",
-            "recommended_version": "1.3",
+            "latest_version": "1.4",
+            "recommended_version": "1.4",
             "versions": [
+                {
+                    "version": "1.4",
+                    "date": "2026-11-15",
+                    "download_url": null,
+                    "download_parts": [
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.4/hp6.7z.001",
+                        "https://github.com/ludvdber/accio-launcher-games/releases/download/hp6-v1.4/hp6.7z.002"
+                    ],
+                    "size_mb": 4415,
+                    "changes": [
+                        "Plus de saccades sous la limite d'images ou avec la synchronisation verticale",
+                        "Plus de coins assombris",
+                        "Ne plante plus à la fermeture",
+                        "Démarre sur le préréglage d'image « Équilibrée »"
+                    ],
+                    "i18n": {
+                        "en": {
+                            "changes": [
+                                "No more stutter below the frame limit or with vertical sync",
+                                "No more darkened corners",
+                                "No longer crashes when closing",
+                                "Starts on the “Balanced” image preset"
+                            ]
+                        },
+                        "es": {
+                            "changes": [
+                                "Adiós a los tirones bajo el límite de imágenes o con la sincronización vertical",
+                                "Sin esquinas oscurecidas",
+                                "Ya no se cuelga al cerrar",
+                                "Arranca con el preajuste de imagen «Equilibrada»"
+                            ]
+                        }
+                    }
+                },
                 {
                     "version": "1.3",
                     "date": "2026-10-27",
@@ -2635,7 +2768,6 @@
             ],
             "fix_settings": [
                 "arriere_plan",
-                "limite_fps_60",
                 "synchro_verticale",
                 "compteur_fps",
                 "panneau_perfs",
@@ -2646,6 +2778,16 @@
                 "vibrations",
                 "son_arriere_plan"
             ],
+            "pre_launch": {
+                "ini_patches": [
+                    {
+                        "file": "%INSTALL_DIR%\\pc\\d3d9.ini",
+                        "section": "Accio.Window",
+                        "key": "FPSLimit",
+                        "value": "30"
+                    }
+                ]
+            },
             "cover_image": "hp7a_cover.jpg",
             "latest_version": "1.3",
             "recommended_version": "1.3",
@@ -2855,7 +2997,7 @@
                     "description": "Step into the darkest chapter of the saga. Harry, Ron and Hermione have left Hogwarts to hunt down and destroy Voldemort's Horcruxes. Fight Snatchers and Death Eaters in intense third-person combat, infiltrate the Ministry of Magic and survive in hostile territory. With its action-driven gameplay and stealth missions, this game puts you at the heart of a war where every spell counts."
                 },
                 "es": {
-                    "name": "Harry Potter y las reliquias de la Muerte — Parte 1",
+                    "name": "Harry Potter y las Reliquias de la Muerte — Parte 1",
                     "description": "Adéntrate en el capítulo más oscuro de la saga. Harry, Ron y Hermione han dejado Hogwarts para buscar y destruir los Horrocruxes de Voldemort. Combate contra carroñeros y mortífagos en intensos enfrentamientos en tercera persona, infíltrate en el Ministerio de Magia y sobrevive en territorio hostil. Con su jugabilidad orientada a la acción y sus misiones de sigilo, este juego te sitúa en el corazón de una guerra donde cada hechizo cuenta."
                 }
             },
@@ -3120,7 +3262,7 @@
                     "warning": "Your antivirus may delete Paul.dll during installation."
                 },
                 "es": {
-                    "name": "Harry Potter y las reliquias de la Muerte — Parte 2",
+                    "name": "Harry Potter y las Reliquias de la Muerte — Parte 2",
                     "description": "La batalla final por Hogwarts. Encarna a Harry y a sus aliados en un explosivo juego de acción centrado en la Batalla de Hogwarts. Encadena hechizos ofensivos y defensivos en enfrentamientos espectaculares, protege el castillo de las fuerzas de Voldemort y lidera el combate final. Con sus coberturas, sus intensos duelos de varitas y sus momentos cinematográficos, esta conclusión épica pone el punto final a la saga de videojuegos de Harry Potter.",
                     "warning": "Su antivirus puede eliminar Paul.dll durante la instalación."
                 }
