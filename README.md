@@ -38,16 +38,16 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 
 | # | Jeu | ID | Année | Release | Téléchargement | Installé | État |
 |:-:|-----|:--:|:-----:|:-------:|:--------------:|:--------:|:----:|
-| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.5` | 242 Mo | 431 Mo | ✅ En ligne |
-| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.4` | 248 Mo | 465 Mo | ✅ En ligne |
-| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.5` | 336 Mo | 772 Mo | ✅ En ligne |
-| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.3` | 848 Mo | 1,6 Go | ✅ En ligne |
-| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.5` | 2,4 Go | 4,6 Go | ✅ En ligne |
-| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.3` | 2,0 Go | 4,3 Go | ✅ En ligne |
-| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.2` | 4,3 Go | 4,5 Go | ✅ En ligne |
+| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.7` | 274 Mo | 466 Mo | ✅ En ligne |
+| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.6` | 403 Mo | 664 Mo | ✅ En ligne |
+| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.7` | 977 Mo | 1,8 Go | ✅ En ligne |
+| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.6` | 1,1 Go | 2,5 Go | ✅ En ligne |
+| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.7` | 3,3 Go | 5,8 Go | ✅ En ligne |
+| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.4` | 2,0 Go | 4,3 Go | ✅ En ligne |
+| VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.3` | 6,6 Go | 6,9 Go | ✅ En ligne |
 | VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | `hp8-v1.3` | 7,3 Go | 7,5 Go | ✅ En ligne |
 
-> **Release** est la version recommandée (catalogue 0.47, relevé le 2026-10-27).
+> **Release** est la version recommandée (catalogue 0.58, relevé le 2026-11-17).
 > **Téléchargement** est le poids réel des pièces jointes, relevé sur l'API GitHub.
 > **Installé** est le `size_mb` déclaré dans le catalogue. Ne confondez jamais les
 > deux : le launcher exige la somme des deux pendant l'installation, l'archive et
@@ -58,8 +58,8 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 > même réponse que les compteurs et les empreintes.
 
 **Le catalogue est complet depuis la v0.18** : les huit jeux de la saga sont
-téléchargeables, et les 38 versions publiées portent toutes une empreinte
-SHA-256 fournie par GitHub (66 fichiers, plus les 8 bandes-annonces, relevé le 2026-10-27).
+téléchargeables, et les 51 versions publiées portent toutes une empreinte
+SHA-256 fournie par GitHub (85 fichiers, plus les 8 bandes-annonces, relevé le 2026-11-17).
 
 Le mécanisme d'annonce reste disponible pour la suite : un jeu dont les `versions`
 ont `download_url` et `download_parts` à `null` s'affiche dans le launcher en
@@ -108,14 +108,14 @@ accio-launcher-games/
 │   ├── hp1/  (HP.ini, User.ini, CHANGELOG.md)
 │   ├── hp2/  (Game.ini, User.ini, CHANGELOG.md)
 │   └── hp3/  (réglages graphiques d'origine et de la v1.0, CHANGELOG.md)
-└── Releases (onglet GitHub)          ← 39 releases : une par version, plus les bandes-annonces
-    ├── hp1-v1.0 … v1.5    → hp1.7z
-    ├── hp2-v1.0 … v1.4    → hp2.7z
-    ├── hp3-v1.0 … v1.5    → hp3.7z
-    ├── hp4-v1.0 … v1.3    → hp4.7z
-    ├── hp5-v1.0 … v1.5    → hp5.7z.001 … .002   (multi-volumes)
-    ├── hp6-v1.0 … v1.3    → hp6.7z.001 … .002
-    ├── hp7-v1.0 … v1.2    → hp7.7z.001 … .003   (hp7a)
+└── Releases (onglet GitHub)          ← 52 releases : une par version, plus les bandes-annonces
+    ├── hp1-v1.0 … v1.7    → hp1.7z
+    ├── hp2-v1.0 … v1.6    → hp2.7z
+    ├── hp3-v1.0 … v1.7    → hp3.7z
+    ├── hp4-v1.0 … v1.6    → hp4.7z
+    ├── hp5-v1.0 … v1.7    → hp5.7z.001 … .002   (multi-volumes)
+    ├── hp6-v1.0 … v1.4    → hp6.7z.001 … .002
+    ├── hp7-v1.0 … v1.3    → hp7.7z.001 … .003, .004 depuis la v1.3   (hp7a)
     ├── hp8-v1.0 … v1.3    → hp8.7z.001 … .004   (hp7b)
     └── trailers-v1        → hp1_video.mp4 … hp7b_video.mp4   (bandes-annonces)
 ```
@@ -163,7 +163,7 @@ d'entre elles suffisaient à le faire passer de 74 à **160 Mo** ; les huit
 l'auraient mené au-delà de 500 Mo, pour un ornement dont tout le monde ne veut
 pas. Elles sont donc publiées ici, en pièces jointes de release, et le launcher
 les propose au premier lancement (case cochable, poids annoncé) puis dans
-**Paramètres → Affichage**, où l'on peut les ajouter ou les supprimer.
+**Paramètres → Son et image**, où l'on peut les ajouter ou les supprimer.
 
 ### Nom des fichiers
 
@@ -215,7 +215,7 @@ Launcher et jouées en fond de fiche.
 
 Elles ne sont plus embarquées dans l'exécutable depuis la 1.0 : deux d'entre
 elles le faisaient passer de 74 à 160 Mo. Le launcher les propose au premier
-lancement et dans Paramètres → Affichage, où l'on peut les ajouter ou les
+lancement et dans Paramètres → Son et image, où l'on peut les ajouter ou les
 supprimer à tout moment.
 
 Ces fichiers ne sont pas nécessaires pour jouer.
@@ -306,19 +306,19 @@ arriver déjà traduit, sans republier l'exécutable.
 Le français reste la source. Une langue absente, ou un champ absent d'une langue,
 retombe simplement sur le français — une traduction partielle ne casse rien.
 
-### Régénérer après une modification
+### Vérifier après une modification
 
-Depuis le dépôt du launcher :
+Les blocs `i18n` sont la source : une traduction s'écrit à la main, dans ce
+fichier et dans la copie embarquée du launcher. Depuis le dépôt du launcher :
 
 ```bash
-python tools/apply_catalog_i18n.py ../accio-launcher-games/games.json
+python tools/verifier_i18n_catalogue.py ../accio-launcher-games/games.json
 ```
 
-Le script est **idempotent** (rejouable sans dupliquer), préserve la mise en
-forme du fichier, et **liste les chaînes françaises qu'il ne sait pas traduire**.
-S'il en signale, ajoutez-les à ses dictionnaires puis relancez-le : c'est le
-garde-fou qui évite qu'un nouveau jeu ou une nouvelle ligne de changelog reste
-en français pour les anglophones et les hispanophones.
+Le script **n'écrit rien** : il liste, langue par langue, chaque texte qui n'a
+pas sa traduction (code de sortie 1 s'il en manque). C'est le garde-fou qui évite
+qu'un nouveau jeu ou une nouvelle ligne de changelog reste en français pour les
+anglophones et les hispanophones.
 
 > Écrivez toujours le JSON avec `ensure_ascii=False`. Sinon les accents partent en
 > `\uXXXX`, le fichier devient illisible en revue de PR, et plus personne ne peut
