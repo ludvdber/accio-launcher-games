@@ -38,16 +38,16 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 
 | # | Jeu | ID | Année | Release | Téléchargement | Installé | État |
 |:-:|-----|:--:|:-----:|:-------:|:--------------:|:--------:|:----:|
-| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.7` | 274 Mo | 466 Mo | ✅ En ligne |
-| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.6` | 403 Mo | 664 Mo | ✅ En ligne |
-| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.7` | 977 Mo | 1,8 Go | ✅ En ligne |
-| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.6` | 1,1 Go | 2,5 Go | ✅ En ligne |
-| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.7` | 3,3 Go | 5,8 Go | ✅ En ligne |
-| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.4` | 2,0 Go | 4,3 Go | ✅ En ligne |
+| I | Harry Potter à l'École des Sorciers | `hp1` | 2001 | `hp1-v1.8` | 274 Mo | 466 Mo | ✅ En ligne |
+| II | Harry Potter et la Chambre des Secrets | `hp2` | 2002 | `hp2-v1.7` | 403 Mo | 664 Mo | ✅ En ligne |
+| III | Harry Potter et le Prisonnier d'Azkaban | `hp3` | 2004 | `hp3-v1.8` | 977 Mo | 1,8 Go | ✅ En ligne |
+| IV | Harry Potter et la Coupe de Feu | `hp4` | 2005 | `hp4-v1.7` | 1,1 Go | 2,5 Go | ✅ En ligne |
+| V | Harry Potter et l'Ordre du Phénix | `hp5` | 2007 | `hp5-v1.8` | 3,3 Go | 5,8 Go | ✅ En ligne |
+| VI | Harry Potter et le Prince de Sang-Mêlé | `hp6` | 2009 | `hp6-v1.5` | 2,0 Go | 4,3 Go | ✅ En ligne |
 | VII | Reliques de la Mort — Partie 1 | `hp7a` | 2010 | `hp7-v1.3` | 6,6 Go | 6,9 Go | ✅ En ligne |
 | VIII | Reliques de la Mort — Partie 2 | `hp7b` | 2011 | `hp8-v1.3` | 7,3 Go | 7,5 Go | ✅ En ligne |
 
-> **Release** est la version recommandée (catalogue 0.58, relevé le 2026-11-17).
+> **Release** est la version recommandée (catalogue 0.60, relevé le 2026-11-20).
 > **Téléchargement** est le poids réel des pièces jointes, relevé sur l'API GitHub.
 > **Installé** est le `size_mb` déclaré dans le catalogue. Ne confondez jamais les
 > deux : le launcher exige la somme des deux pendant l'installation, l'archive et
@@ -58,8 +58,8 @@ launcher soit publiée**. C'est le principe : le catalogue vit sa propre vie.
 > même réponse que les compteurs et les empreintes.
 
 **Le catalogue est complet depuis la v0.18** : les huit jeux de la saga sont
-téléchargeables, et les 51 versions publiées portent toutes une empreinte
-SHA-256 fournie par GitHub (85 fichiers, plus les 8 bandes-annonces, relevé le 2026-11-17).
+téléchargeables, et les 57 versions publiées portent toutes une empreinte
+SHA-256 fournie par GitHub (93 fichiers, plus les 8 bandes-annonces, relevé le 2026-11-20).
 
 Le mécanisme d'annonce reste disponible pour la suite : un jeu dont les `versions`
 ont `download_url` et `download_parts` à `null` s'affiche dans le launcher en
@@ -108,13 +108,13 @@ accio-launcher-games/
 │   ├── hp1/  (HP.ini, User.ini, CHANGELOG.md)
 │   ├── hp2/  (Game.ini, User.ini, CHANGELOG.md)
 │   └── hp3/  (réglages graphiques d'origine et de la v1.0, CHANGELOG.md)
-└── Releases (onglet GitHub)          ← 52 releases : une par version, plus les bandes-annonces
-    ├── hp1-v1.0 … v1.7    → hp1.7z
-    ├── hp2-v1.0 … v1.6    → hp2.7z
-    ├── hp3-v1.0 … v1.7    → hp3.7z
-    ├── hp4-v1.0 … v1.6    → hp4.7z
-    ├── hp5-v1.0 … v1.7    → hp5.7z.001 … .002   (multi-volumes)
-    ├── hp6-v1.0 … v1.4    → hp6.7z.001 … .002
+└── Releases (onglet GitHub)          ← 58 releases : une par version, plus les bandes-annonces
+    ├── hp1-v1.0 … v1.8    → hp1.7z
+    ├── hp2-v1.0 … v1.7    → hp2.7z
+    ├── hp3-v1.0 … v1.8    → hp3.7z
+    ├── hp4-v1.0 … v1.7    → hp4.7z
+    ├── hp5-v1.0 … v1.8    → hp5.7z.001 … .002   (multi-volumes)
+    ├── hp6-v1.0 … v1.5    → hp6.7z.001 … .002
     ├── hp7-v1.0 … v1.3    → hp7.7z.001 … .003, .004 depuis la v1.3   (hp7a)
     ├── hp8-v1.0 … v1.3    → hp8.7z.001 … .004   (hp7b)
     └── trailers-v1        → hp1_video.mp4 … hp7b_video.mp4   (bandes-annonces)
